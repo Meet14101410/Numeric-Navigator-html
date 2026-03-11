@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Numeric Navigator</title>
+</head>
+<body>
+
+<h2>Numeric Navigator</h2>
+
+<p id="question"></p>
+<input type="number" id="answer">
+<button onclick="check()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+let a = Math.floor(Math.random()*10);
+let b = Math.floor(Math.random()*10);
+document.getElementById("question").innerHTML = a + " + " + b + " = ?";
+
+function check(){
+  let ans = document.getElementById("answer").value;
+  if(ans == a + b){
+    document.getElementById("result").innerHTML = "Correct!";
+  } else {
+    document.getElementById("result").innerHTML = "Try Again!";
+  }
+}
+</script>
+
+</body>
+</html>
